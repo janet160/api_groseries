@@ -51,16 +51,23 @@ productController.insertOne = async (req, res) => {
 }
 
 productController.updateOne = async (req, res) => {
-    productDao.updateOne(req.params.barcode, req.body)
-        .then(result => {
-            if (result) {
-                res.status(200).redirect('/');
-            }
-        })
-        .catch(err => {
-            res.status(500).json({ "status": "Server unaviable" });
-        });
-}
+    const barcode = req.params.barcode;
+    const updatedProduct = req.body;  
+ 
+    try {
+       const result = await productDao.updateOne(barcode, updatedProduct);
+       if (result) {
+          console.log('Producto actualizado con éxito.');
+          res.redirect('/');
+       } else {
+          console.log('No se pudo actualizar el producto.');
+          res.status(500).send('Error interno del servidor');
+       }
+    } catch (error) {
+       console.error('Error al actualizar el producto:', error);
+       res.status(500).send('Error interno del servidor');
+    }
+ }
 
 productController.deleteOne = async (req, res) => {
     productDao.deleteOne(req.params.barcode)
