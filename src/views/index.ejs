@@ -38,52 +38,53 @@
                 </select>
                 <button class="ui-shadow ui-btn ui-corner-all" type="submit">Guardar</button>
             </form>
-            <!--  -->
 
             <form>
                 <input data-type="search" id="searchForCollapsibleSetChildren">
             </form>
+
             <div data-role="collapsibleset" data-filter="true" data-children="> div, > div div ul li" data-inset="true"
                 id="collapsiblesetForFilterChildren" data-input="#searchForCollapsibleSetChildren">
-                
-                <% products.forEach((product)=> {%>
-                    <div data-role="collapsible" data-filtertext="<%= product.description%>">
-                        <h3>
-                            <%= product.description %>
-                        </h3>
-                        <ul data-role="listview" data-inset="false">
-                            <li>
-                                Codigo de barras: <%= product.barcode%>
-                            </li>
-                            <li data-filtertext="<%= product.brand%>">
-                                Descripción: <%= product.brand%>
-                            </li>
-                            <li data-filtertext="<%= product.cost%>">
-                                Costo: <%= product.cost%>
-                            </li>
-                            <li data-filtertext="<%= product.price%>">
-                                Precio: <%= product.price%>
-                            </li>
-                            <li data-filtertext="<%= product.stock%>">
-                                Stock: <%= product.stock%>
-                            </li>
-                            <li data-filtertext="<%= product.expiredDate%>">
-                                Fecha de caducidad: <%= product.expiredDate%>
-                            </li>
-                            <li>Status:<%= product.status %></li>
-                                <a href="/<%=product.barcode %>" class="ui-btn">Editar</a>
-                                    <a href="/delete/<%=product.barcode %>" class="ui-btn">Eliminar</a>
-                            </li>
 
-                        </ul>
-
-                    </div>
-                    <% })%>
+                <% products.forEach((product) => { %>
+                <div data-role="collapsible" data-filtertext="<%= product.description%>">
+                    <h3>
+                        <%= product.description %>
+                    </h3>
+                    <ul data-role="listview" data-inset="false">
+                        <li>
+                            Codigo de barras: <%= product.barcode%>
+                        </li>
+                        <li data-filtertext="<%= product.brand%>">
+                            Descripción: <%= product.brand%>
+                        </li>
+                        <li data-filtertext="<%= product.cost%>">
+                            Costo: <%= product.cost%>
+                        </li>
+                        <li data-filtertext="<%= product.price%>">
+                            Precio: <%= product.price%>
+                        </li>
+                        <li data-filtertext="<%= product.stock%>">
+                            Stock: <%= product.stock%>
+                        </li>
+                        <li data-filtertext="<%= product.expiredDate%>">
+                            Fecha de caducidad: <%= product.expiredDate%>
+                        </li>
+                        <li>Status:<%= product.status %></li>
+                        <li>
+                            <a href="/<%=product.barcode %>" class="ui-btn">Editar</a>
+                            <a href="/delete/<%=product.barcode %>" class="ui-btn">Eliminar</a>
+                        </li>
+                    </ul>
+                </div>
+                <% }) %>
             </div>
+
             <div data-role="footer">
                 <h5>Developed by Leslie Aparicio C.</h5>
             </div>
         </div>
+    </div>
 </body>
 
 </html>

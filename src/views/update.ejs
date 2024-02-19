@@ -23,11 +23,11 @@
             </div>
         </div>
         <div data-role="content">
-            <form action="/<%= product.barcode%>" method="post">
+            <form action="/" method="post">
                 <input type="text" name="barcode" placeholder="Código de barras" value="<%= product.barcode %>">
                 <input type="text" name="description" placeholder="Descripción" value="<%= product.description %>">
                 <input type="text" name="brand" placeholder="Marca" value="<%= product.brand %>">
-                <input type="number" name="price" placeholder="Precio"value="<%= product.price %>">
+                <input type="number" name="price" placeholder="Precio" value="<%= product.price %>">
                 <input type="number" name="cost" placeholder="Costo" value="<%= product.cost %>">
                 <input type="number" name="stock" placeholder="Stock" value="<%= product.stock %>">
                 <input type="date" name="expiredDate" placeholder="Fecha de expiracion" value="<%= product.expiredDate %>">
@@ -40,10 +40,11 @@
                     <option value="0" selected>No</option>
                     <option value="1" >Si</option>
                     <%}%>
-                    v
                 </select>
                 <button class="ui-shadow ui-btn ui-corner-all" type="submit">Actualizar</button>
             </form> 
+        </div>
+    </div>
 </body>
 
 </html>
