@@ -1,0 +1,21 @@
+{
+    "sensor": {
+      "id": "",
+      "nombre": "",
+      "descripcion": "",
+      "ubicacion": "",
+      "tipo": "",
+      "estatus": "",
+      "lecturas": [
+        {
+          "fecha": "",
+          "distancia": ""
+        }
+      ]
+    }
+  }
+  
+
+
+
+  
