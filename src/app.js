@@ -11,6 +11,6 @@ app.set('view engine', 'ejs');
 
 config()
 
-app.use('/api/products', productsRouter);
+app.use('/', productsRouter);
 
 export default app;
