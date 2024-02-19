@@ -43,7 +43,7 @@ productController.insertOne = async (req, res) => {
 productDao.insertOne(req.body)
 .then(result => {
   if(result)
-   res.redirect('/api/products');
+   res.redirect('/');
 }).catch(err => {
    res.status(500).json({"status":"Server unaviable"})
 })
@@ -53,7 +53,7 @@ productController.updateOne = async (req, res) => {
    productDao.updateOne(req.params.barcode, req.body)
    .then(result => {
       if(result){
-         res.status(200).redirect('/api/products')
+         res.status(200).redirect('/')
       }
    })
    .catch(err => {
@@ -65,7 +65,7 @@ productController.deleteOne = async (req, res) => {
    productDao.deleteOne(req.params.barcode)
    .then(result => {
       if(result){
-         res.status(200).redirect('/api/products')
+         res.status(200).redirect('/')
       }
    })
    .catch(err => {
