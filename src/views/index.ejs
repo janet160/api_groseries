@@ -36,7 +36,7 @@
                     <option value="0">No</option>
                     <option value="1">Si</option>
                 </select>
-                <button class="ui-shadow ui-btn ui-corner-all" type="submit">Guardar</button>
+                <button class="ui-shadow ui-btn ui-corner-all" type="submit" style="color: #2c3e50; transition: color 0.3s;" onmouseover="this.style.color='#037ebb'" onmouseout="this.style.color='#2c3e50'">Guardar</button>
             </form>
 
             <form>
@@ -59,8 +59,8 @@
                            <p data-filtertext="<%= product.expiredDate%>">Fecha de caducidad: <%= product.expiredDate%></p>
                            <p>Status: <%= product.status %></p>
                            <div>
-                               <a href="/<%=product.barcode %>" class="ui-btn">Editar</a>
-                               <a href="/delete/<%=product.barcode %>" class="ui-btn">Eliminar</a>
+                            <a href="/<%=product.barcode %>" class="ui-btn" style="color: #2c3e50; transition: color 0.3s;" onmouseover="this.style.color='#037ebb'" onmouseout="this.style.color='#2c3e50'">Editar</a>
+                            <a href="/delete/<%=product.barcode %>" class="ui-btn" style="color: #2c3e50; transition: color 0.3s;" onmouseover="this.style.color='#037ebb'" onmouseout="this.style.color='#2c3e50'">Eliminar</a>
                            </div>
                        </div>
                    </div>
