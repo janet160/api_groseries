@@ -21,8 +21,6 @@
 
 .product-card img {
     float: right; /* Nueva regla para ajustar las imágenes a la derecha */
-    margin-top: -1000px;
-    width: 300px;
 }
 
 .product-card p {
@@ -96,7 +94,7 @@
                             <p data-filtertext="<%= product.expiredDate%>">Fecha de caducidad: <%= product.expiredDate%></p>
                             <p>Status: <%= product.status %></p>
                             <div>
-                            <img style="width: 100px; border-radius: 5px; height: 200px; margin-bottom: 10px;" src="<%= product.urlImg %>" alt="<%= product.barcode %>">
+                            <img style="width: 300px; border-radius: 5px; height: 300px; margin-bottom: 10px;" src="<%= product.urlImg %>" alt="<%= product.barcode %>">
                                 <a href="/<%=product.barcode %>" class="ui-btn">Editar</a>
                                 <a href="/delete/<%=product.barcode %>" class="ui-btn">Eliminar</a>
                             </div>
