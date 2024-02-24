@@ -94,7 +94,6 @@
                             <p data-filtertext="<%= product.expiredDate%>">Fecha de caducidad: <%= product.expiredDate%></p>
                             <p>Status: <%= product.status %></p>
                             <div>
-                            <img style="width: 300px; border-radius: 5px; height: 300px; margin-bottom: 10px;" src="<%= product.urlImg %>" alt="<%= product.barcode %>">
                                 <a href="/<%=product.barcode %>" class="ui-btn">Editar</a>
                                 <a href="/delete/<%=product.barcode %>" class="ui-btn">Eliminar</a>
                             </div>
