@@ -13,8 +13,8 @@
 <body>
     <div data-role="page">
         <div class="" data-role="header">
-            <h1>Abarrotes TI</h1>
-            <div data-role="navbar">
+            <h1 style="background-color: #037ebb;">Abarrotes TI</h1>
+            <div data-role="navbar" style="background-color: #4d7eee;">
                 <ul>
                     <li><a href="#" data-icon="home">Inicio</a></li>
                     <li><a href="#" data-icon="eye" class="ui-btn-active">Productos</a></li>
@@ -22,7 +22,7 @@
                 </ul>
             </div>
         </div>
-        <div data-role="content">
+        <div data-role="content" style="background-color: #037ebb;">
             <form action="/<%= product.barcode %>" method="post">
                 <input type="text" name="barcode" placeholder="Código de barras" value="<%= product.barcode %>" readonly>
                 <input type="text" name="description" placeholder="Descripción" value="<%= product.description %>">
