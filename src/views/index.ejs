@@ -116,7 +116,7 @@
                             <p data-filtertext="<%= product.price%>">Precio: <%= product.price%></p>
                             <p data-filtertext="<%= product.stock%>">Stock: <%= product.stock%></p>
                             <p data-filtertext="<%= product.expiredDate%>">Fecha de caducidad: <%= product.expiredDate%></p>
-                            <img style="width: 100px; border-radius: 5px; height: 85px; margin-bottom: 10px;" src="<%= products.urlImg %>" alt="<%= products.description %>">
+                            <img style="width: 100px; border-radius: 5px; height: 85px; margin-bottom: 10px;" src="<%= product.urlImg %>" alt="<%= product.description %>">
                             <p>Status: <%= product.status %></p>
                             <div>
                                 <a href="/<%=product.barcode %>" class="ui-btn">Editar</a>
