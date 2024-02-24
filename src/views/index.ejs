@@ -9,17 +9,7 @@
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <title>Document</title>
 </head>
-<style>
-    .card {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    display: inline-block;
-}
-</style>
+
 <body>
     <div data-role="page">
         <div class="" data-role="header">
@@ -32,7 +22,6 @@
                 </ul>
             </div>
         </div>
-        <div class="card">
         <div data-role="content" style="background-color: #037ebb;">
             <form action="/" method="post" >
                 <input type="text" name="barcode" placeholder="Código de barras">
@@ -49,7 +38,10 @@
                 </select>
                 <button class="ui-shadow ui-btn ui-corner-all" type="submit" style="color: #2c3e50; transition: color 0.3s;" onmouseover="this.style.color='#037ebb'" onmouseout="this.style.color='#2c3e50'">Guardar</button>
             </form>
-        </div>
+
+            <form>
+                <input data-type="search" id="searchForCollapsibleSetChildren">
+            </form>
             <div style="color:black; ">
                 <h2>Productos Registados</h2>
             </div>
