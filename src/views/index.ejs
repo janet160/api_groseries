@@ -109,7 +109,7 @@
                 <% products.forEach((product) => { %>
                     <div data-role="collapsible" data-filtertext="<%= product.description%>">
                         <h3><%= product.description %></h3>
-                        <div class="product-card">
+                        <div class="product-card" style="background-color: #037ebb;">
                             <p>Codigo de barras: <%= product.barcode%></p>
                             <p data-filtertext="<%= product.brand%>">Descripción: <%= product.brand%></p>
                             <p data-filtertext="<%= product.cost%>">Costo: <%= product.cost%></p>
