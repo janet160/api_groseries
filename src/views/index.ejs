@@ -9,7 +9,37 @@
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <title>Document</title>
 </head>
+<style>
+    .form-card {
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 10px;
+        margin: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
 
+    .form-card input,
+    .form-card select {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+    }
+
+    .form-card button {
+        width: 100%;
+        padding: 10px;
+        background-color: #037ebb;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .form-card button:hover {
+        background-color: #2c3e50;
+    }
+</style>
 <body>
     <div data-role="page">
         <div class="" data-role="header" style="background-color: #037ebb;">
@@ -23,7 +53,7 @@
             </div>
         </div>
         <div data-role="content" style="background-color: #037ebb;">
-            <form action="/" method="post" >
+            <form action="/" method="post" class="form-card">
                 <input type="text" name="barcode" placeholder="Código de barras">
                 <input type="text" name="description" placeholder="Descripción">
                 <input type="text" name="brand" placeholder="Marca">
@@ -36,7 +66,7 @@
                     <option value="0">No</option>
                     <option value="1">Si</option>
                 </select>
-                <button class="ui-shadow ui-btn ui-corner-all" type="submit" style="color: #2c3e50; transition: color 0.3s;" onmouseover="this.style.color='#037ebb'" onmouseout="this.style.color='#2c3e50'">Guardar</button>
+                <button class="ui-shadow ui-btn ui-corner-all" type="submit">Guardar</button>
             </form>
 
             <form>
