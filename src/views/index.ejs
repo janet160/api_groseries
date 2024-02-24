@@ -105,7 +105,7 @@
             <div style="color:black; ">
                 <h2>Productos Registados</h2>
             </div>
-            <div data-role="collapsibleset" data-filter="true" data-children="> div, > div div ul li" data-inset="true" id="collapsiblesetForFilterChildren" data-input="#searchForCollapsibleSetChildren">
+            <div data-role="collapsibleset" data-filter="true" data-children="> div, > div div ul li" data-inset="true" id="collapsiblesetForFilterChildren" data-input="#searchForCollapsibleSetChildren" style="background-color: #037ebb;">
                 <% products.forEach((product) => { %>
                     <div data-role="collapsible" data-filtertext="<%= product.description%>">
                         <h3><%= product.description %></h3>
