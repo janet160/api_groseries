@@ -31,7 +31,7 @@
                 <input type="number" name="cost" placeholder="Costo">
                 <input type="number" name="stock" placeholder="Stock">
                 <input type="date" name="expiredDate" placeholder="Fecha de expiracion">
-                <label for="status" style="color: #557ff3";>Activo</label>
+                <label for="status" style="color: #557ff3">Activo</label>
                 <select name="status" data-role="slider">
                     <option value="0">No</option>
                     <option value="1">Si</option>
@@ -42,9 +42,10 @@
             <form>
                 <input data-type="search" id="searchForCollapsibleSetChildren">
             </form>
-            <div class="product-item" style="width: 100%; margin-bottom: 40px; background-color:#557ff3; color: black; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); text-align: center;">
+
             <div data-role="collapsibleset" data-filter="true" data-children="> div, > div div ul li" data-inset="true"
                 id="collapsiblesetForFilterChildren" data-input="#searchForCollapsibleSetChildren">
+
                 <% products.forEach((product) => { %>
                 <div data-role="collapsible" data-filtertext="<%= product.description%>">
                     <h3>
@@ -76,12 +77,11 @@
                         </li>
                     </ul>
                 </div>
-                </div>
                 <% }) %>
             </div>
 
-            <div style="color:  #557ff3">
-                <h2>Developer for Leslie Aparicio</h2>
+            <div style="color: #557ff3;">
+                <h2>Developed for Leslie Aparicio</h2>
             </div>
         </div>
     </div>
