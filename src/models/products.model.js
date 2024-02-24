@@ -12,6 +12,7 @@ const productSchema = new Schema({
     cost: Number,
     stock: Number,
     expiredDate: String,
+    urlImg: String ,
     status: Number
 }, {
     timestamps: true,

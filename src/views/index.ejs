@@ -102,7 +102,7 @@
             </form>
 
 
-            <div style="color:black; ">
+            <div style="color:white; ">
                 <h2>Productos Registados</h2>
             </div>
             <div data-role="collapsibleset" data-filter="true" data-children="> div, > div div ul li" data-inset="true" id="collapsiblesetForFilterChildren" data-input="#searchForCollapsibleSetChildren" style="background-color: #037ebb;">
@@ -116,6 +116,7 @@
                             <p data-filtertext="<%= product.price%>">Precio: <%= product.price%></p>
                             <p data-filtertext="<%= product.stock%>">Stock: <%= product.stock%></p>
                             <p data-filtertext="<%= product.expiredDate%>">Fecha de caducidad: <%= product.expiredDate%></p>
+                            <img style="width: 100px; border-radius: 5px; height: 85px; margin-bottom: 10px;" src="<%= product.urlImg %>" alt="<%= product.description %>">
                             <p>Status: <%= product.status %></p>
                             <div>
                                 <a href="/<%=product.barcode %>" class="ui-btn">Editar</a>
