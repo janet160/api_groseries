@@ -13,7 +13,6 @@
 <body>
     <div data-role="page">
         <div class="" data-role="header">
-            <h1 style="background-color: #037ebb;">Abarrotes TI</h1>
             <div data-role="navbar" style="background-color: #4d7eee;">
                 <ul>
                     <li><a href="#" data-icon="home">Inicio</a></li>
@@ -31,7 +30,7 @@
                 <input type="number" name="cost" placeholder="Costo" value="<%= product.cost %>">
                 <input type="number" name="stock" placeholder="Stock" value="<%= product.stock %>">
                 <input type="date" name="expiredDate" placeholder="Fecha de expiracion" value="<%= product.expiredDate %>">
-                <input type="text" name="urlImg" placeholder="URL de la imagen" value="<%= product.urlImg %>">
+                <input type="text" name="urlImg" placeholder="URL de la imagen" value="<%= products.urlImg %>">
                 <label for="status">Activo</label>
                 <select name="status" data-role="slider">
                     <%if(product.status == 1){%>
