@@ -30,7 +30,6 @@
                 <input type="number" name="cost" placeholder="Costo" value="<%= product.cost %>">
                 <input type="number" name="stock" placeholder="Stock" value="<%= product.stock %>">
                 <input type="date" name="expiredDate" placeholder="Fecha de expiracion" value="<%= product.expiredDate %>">
-                <input type="text" name="urlImg" placeholder="URL de la imagen" value="<%= product.urlImg %>">
                 <label for="status">Activo</label>
                 <select name="status" data-role="slider">
                     <%if(product.status == 1){%>
@@ -41,6 +40,7 @@
                     <option value="1" >Si</option>
                     <%}%>
                 </select>
+                <input type="text" name="urlImg" placeholder="URL de la imagen" value="<%= product.urlImg %>">
                 <button class="ui-shadow ui-btn ui-corner-all" type="submit">Actualizar</button>
             </form> 
         </div>

@@ -98,6 +98,7 @@
                     <option value="0">No</option>
                     <option value="1">Si</option>
                 </select>
+                <input type="text" name="urlImg" placeholder="URL de la imagen">
                 <button class="ui-shadow ui-btn ui-corner-all" type="submit">Guardar</button>
             </form>
 
@@ -116,9 +117,9 @@
                             <p data-filtertext="<%= product.price%>">Precio: <%= product.price%></p>
                             <p data-filtertext="<%= product.stock%>">Stock: <%= product.stock%></p>
                             <p data-filtertext="<%= product.expiredDate%>">Fecha de caducidad: <%= product.expiredDate%></p>
-                            <img style="width: 100px; border-radius: 5px; height: 85px; margin-bottom: 10px;" src="<%= product.urlImg %>" alt="<%= product.description %>">
                             <p>Status: <%= product.status %></p>
                             <div>
+                            <img style="width: 100px; border-radius: 5px; height: 85px; margin-bottom: 10px;" src="<%= product.urlImg %>" alt="<%= product.barcode %>">
                                 <a href="/<%=product.barcode %>" class="ui-btn">Editar</a>
                                 <a href="/delete/<%=product.barcode %>" class="ui-btn">Eliminar</a>
                             </div>
