@@ -22,7 +22,7 @@
                 </ul>
             </div>
         </div>
-        <div data-role="content">
+        <div data-role="content" style="text-align: center;">
             <form action="/<%= product.barcode %>" method="post">
                 <input type="text" name="barcode" placeholder="Código de barras" value="<%= product.barcode %>" readonly>
                 <input type="text" name="description" placeholder="Descripción" value="<%= product.description %>">
@@ -33,17 +33,17 @@
                 <input type="date" name="expiredDate" placeholder="Fecha de expiracion" value="<%= product.expiredDate %>">
                 <label for="status">Activo</label>
                 <select name="status" data-role="slider">
-                    <%if(product.status == 1){%>
-                    <option value="0" >No</option>
+                    <% if(product.status == 1) { %>
+                    <option value="0">No</option>
                     <option value="1" selected>Si</option>
-                    <%}else{%>
+                    <% } else { %>
                     <option value="0" selected>No</option>
-                    <option value="1" >Si</option>
-                    <%}%>
+                    <option value="1">Si</option>
+                    <% } %>
                 </select>
                 <button class="ui-shadow ui-btn ui-corner-all" type="submit">Actualizar</button>
             </form> 
-        </div>
+        </div>        
     </div>
 </body>
 
