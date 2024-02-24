@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    <title>Document</title>
+    <title>Abarrotes TI</title>
 </head>
 
 <body>
     <div data-role="page" data-theme="b">
-        <div class="" data-role="header">
+        <div data-role="header">
             <h1>Abarrotes TI</h1>
             <div data-role="navbar">
                 <ul>
@@ -22,8 +22,10 @@
                 </ul>
             </div>
         </div>
+
         <div data-role="content">
             <form action="/" method="post">
+                <!-- Input fields for product information -->
                 <input type="text" name="barcode" placeholder="Código de barras">
                 <input type="text" name="description" placeholder="Descripción">
                 <input type="text" name="brand" placeholder="Marca">
@@ -48,28 +50,15 @@
 
                 <% products.forEach((product) => { %>
                 <div data-role="collapsible" data-filtertext="<%= product.description%>">
-                    <h3>
-                        <%= product.description %>
-                    </h3>
+                    <h3><%= product.description %></h3>
                     <ul data-role="listview" data-inset="false">
-                        <li>
-                            Codigo de barras: <%= product.barcode%>
-                        </li>
-                        <li data-filtertext="<%= product.brand%>">
-                            Descripción: <%= product.brand%>
-                        </li>
-                        <li data-filtertext="<%= product.cost%>">
-                            Costo: <%= product.cost%>
-                        </li>
-                        <li data-filtertext="<%= product.price%>">
-                            Precio: <%= product.price%>
-                        </li>
-                        <li data-filtertext="<%= product.stock%>">
-                            Stock: <%= product.stock%>
-                        </li>
-                        <li data-filtertext="<%= product.expiredDate%>">
-                            Fecha de caducidad: <%= product.expiredDate%>
-                        </li>
+                        <!-- List items for product details -->
+                        <li>Codigo de barras: <%= product.barcode%></li>
+                        <li data-filtertext="<%= product.brand%>">Descripción: <%= product.brand%></li>
+                        <li data-filtertext="<%= product.cost%>">Costo: <%= product.cost%></li>
+                        <li data-filtertext="<%= product.price%>">Precio: <%= product.price%></li>
+                        <li data-filtertext="<%= product.stock%>">Stock: <%= product.stock%></li>
+                        <li data-filtertext="<%= product.expiredDate%>">Fecha de caducidad: <%= product.expiredDate%></li>
                         <li>Status:<%= product.status %></li>
                         <li>
                             <a href="/<%=product.barcode %>" class="ui-btn">Editar</a>
@@ -79,10 +68,10 @@
                 </div>
                 <% }) %>
             </div>
+        </div>
 
-            <div data-role="footer">
-                <h5>Developed by Leslie Aparicio C.</h5>
-            </div>
+        <div data-role="footer">
+            <h5>Developed by Leslie Aparicio C.</h5>
         </div>
     </div>
 </body>
